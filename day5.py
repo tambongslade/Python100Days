@@ -49,7 +49,7 @@ for i in range(0, nr_numbers):
     password.append(random.randint(0, len(numbers) - 1))
 
 print(type(password))
-passx = ""
+passx = ""       
 for i in password:
     passx[i] = password[i]
 
