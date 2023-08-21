@@ -21,7 +21,6 @@ def NextGame():
     return choice
 def failed():
     os.system('cls')
-
     print(logo)
     print(f"Sorry your wrong, Final score {score}")
 def checkchoice(n):
