@@ -7,22 +7,27 @@ MOVE_INCREMENT = 10
 
 class CarManager(Turtle):
     def __init__(self):
-        super().__init__()
-        self.penup()
-        self.shape("square")
-        self.setheading(180)
-        self.color(random.choice(COLORS))
-        self.shapesize(stretch_wid=1,stretch_len=random.randint(1,5))
-        self.goto(270,random.randint(-290,280))
+       super().__init__()
+       self.cars=[]
+      
+       for i in range(15):
+            car=Turtle()
+            car.shape("square")
+            car.penup()
+            car.color(random.choice(COLORS))
+            car.shapesize(stretch_wid=1,stretch_len=3)
+            car.goto(random.randint(-260,260),random.randint(-260,260))
+            self.cars.append(car)
+            self.Cposition=self.cars[0].xcor()+15
     def move(self):
-        new_x=self.xcor()-5
-        self.goto(new_x,self.ycor())
+        for car in self.cars:
+            new_x=car.xcor()-STARTING_MOVE_DISTANCE
+            car.goto(new_x,car.ycor())
     def gen(self):
-        for i in range(0,random.randint(0,9)):
-            self.penup()
-            self.shape("square")
-            self.setheading(180)
-            self.color(random.choice(COLORS))
-            self.shapesize(stretch_wid=1,stretch_len=random.randint(1,5))
-            self.goto(270,random.randint(-290,280))
-
+            car=Turtle()
+            car.shape("square")
+            car.penup()
+            car.color(random.choice(COLORS))
+            car.shapesize(stretch_wid=1,stretch_len=3)
+            car.goto(280,random.randint(-260,260))
+            self.cars.append(car)
