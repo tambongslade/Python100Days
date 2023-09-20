@@ -9,3 +9,5 @@ title = [one.getText() for one in soup.select(selector=".titleline a ")]
 print(title)
 score = [ele.getText() for ele in soup.find_all(name="span" , class_="score")]
 print(score)
+score = [int(sc.split(' ')[0]) for sc in score]
+print(score)
