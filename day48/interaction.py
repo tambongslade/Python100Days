@@ -1,7 +1,12 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-
-chrome_path = "C:\\Users\\Lenovo\\.cache\\selenium\\chromedriver\\win64\\117.0.5938.88\\chromedriver.exe"
+from selenium.webdriver.chrome.options import Options
+option = Options()
+option.add_argument("--window-size=1980,1080")
+chrome_path = "D:\\Drivers\\chromedriver.exe"
 # Use ChromeDriverManager to automatically download and manage Chrome WebDriver
-driver = webdriver.Chrome()
-pip = webdriver.Chrome(driver.service.path)
+driver = webdriver.Chrome(option)
+driver.get("http://google.com")
+
+
+
