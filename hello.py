@@ -7,7 +7,7 @@ def make_bold(function):
     return inner
 
 @app.route("/")
-@make_bold()
+
 def hello_world():
     return '<h1><p style="text-align: center  ">Hello, World!</p></h1>'\
             '<p> i think i love you.</p>'\
