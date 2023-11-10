@@ -6,8 +6,8 @@ items=MenuItem
 cof=CoffeeMaker()
 mone=MoneyMachine()
 while True:
-    choice=input(f"Choose your drink {men.get_items()}?")
-    if choice=="report":
+    choice = input(f"Choose your drink {men.get_items()}?")
+    if choice == "report":
         cof.report()
         mone.report()
     elif men.find_drink(choice)!= None:
